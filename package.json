@@ -3,9 +3,18 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@babel/standalone": "^7.5.0",
+    "codemirror": "^5.48.0",
+    "esprima": "^4.0.1",
+    "lodash": "^4.17.11",
     "react": "^16.8.6",
+    "react-codemirror2": "^6.0.0",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-redux": "^7.1.0",
+    "react-scripts": "3.0.1",
+    "react-split-pane": "^0.1.87",
+    "redux": "^4.0.1",
+    "reselect": "^4.0.0"
   },
   "scripts": {
     "start": "react-scripts start",
