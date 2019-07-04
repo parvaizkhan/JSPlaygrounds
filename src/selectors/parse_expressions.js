@@ -59,6 +59,7 @@ const parseExpressions = (code) => {
   eval(transformedCode);
   return exp;
 }
+
 export default createSelector(
   codeSelector,
   parseExpressions
