@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/jsplaygrounds/static/css/main.2fa796e1.chunk.css",
+    "main.js": "/jsplaygrounds/static/js/main.ade526dd.chunk.js",
+    "main.js.map": "/jsplaygrounds/static/js/main.ade526dd.chunk.js.map",
+    "runtime~main.js": "/jsplaygrounds/static/js/runtime~main.8003f78f.js",
+    "runtime~main.js.map": "/jsplaygrounds/static/js/runtime~main.8003f78f.js.map",
+    "static/css/2.c66c8416.chunk.css": "/jsplaygrounds/static/css/2.c66c8416.chunk.css",
+    "static/js/2.cb8e064f.chunk.js": "/jsplaygrounds/static/js/2.cb8e064f.chunk.js",
+    "static/js/2.cb8e064f.chunk.js.map": "/jsplaygrounds/static/js/2.cb8e064f.chunk.js.map",
+    "index.html": "/jsplaygrounds/index.html",
+    "precache-manifest.ac375bd87f0e02c04becb35aa3e4fbf2.js": "/jsplaygrounds/precache-manifest.ac375bd87f0e02c04becb35aa3e4fbf2.js",
+    "service-worker.js": "/jsplaygrounds/service-worker.js",
+    "static/css/2.c66c8416.chunk.css.map": "/jsplaygrounds/static/css/2.c66c8416.chunk.css.map",
+    "static/css/main.2fa796e1.chunk.css.map": "/jsplaygrounds/static/css/main.2fa796e1.chunk.css.map"
+  }
+}
