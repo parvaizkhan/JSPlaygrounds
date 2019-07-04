@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import SplitPane from 'react-split-pane';
-import Editor from './editor';
-import Viewer from './viewer';
+import Editor from './components/Editor';
+import Viewer from './components/Viewer';
 
 export default class App extends Component {
   render() {

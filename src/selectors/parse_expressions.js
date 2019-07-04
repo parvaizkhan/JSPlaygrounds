@@ -1,11 +1,11 @@
 import _ from 'lodash';
 import { createSelector } from 'reselect';
-import { transform } from 'babel-standalone';
-import esprima from 'esprima';
+import { transform } from '@babel/standalone';
+import * as esprima from 'esprima';
 
 const codeSelector = state => state.code;
-const OPEN_DELIMITERS = [ '(', '{', '[', '`' ];
-const CLOSE_DELIMITERS = [ ')', '}', ']', '`' ];
+const OPEN_DELIMITERS = ['(', '{', '[', '`'];
+const CLOSE_DELIMITERS = [')', '}', ']', '`'];
 const DELIMITER_MAP = {
   ')': '(',
   '}': '{',
@@ -13,21 +13,20 @@ const DELIMITER_MAP = {
   '`': '`'
 };
 
-const findDelimiters = ({ column }, lineContents) =>
-  _.intersection(_.takeRight(lineContents, lineContents.length - column), OPEN_DELIMITERS).length
+const findDelimiters = ({ column }, lineContents) => {
+  return _.intersection(_.takeRight(lineContents, lineContents.length - column), OPEN_DELIMITERS).length
+}
 
 const parseExpressions = (code) => {
-  const transformedCode = transform(code, { presets: ['react']}).code;
+  const transformedCode = transform(code, { presets: ['react'] }).code;
   const codeByLine = transformedCode.split('\n');
   const tokenized = esprima.tokenize(transformedCode, { loc: true });
-
   const parens = { '(': 0, '{': 0, '[': 0 };
   let wasOpen = false;
   const exp = _.reduce(tokenized, (expressions, { value, loc: { end } }, index) => {
     const lineNumber = end.line;
     const lineContents = codeByLine[lineNumber - 1];
     const lineHasMoreDelimiters = findDelimiters(end, lineContents);
-    const endOfLine = end.column === lineContents.length;
 
     if (expressions[lineNumber]) { return expressions; }
 
@@ -56,10 +55,10 @@ const parseExpressions = (code) => {
     return expressions;
   }, {});
 
+  // eslint-disable-next-line
   eval(transformedCode);
   return exp;
 }
-
 export default createSelector(
   codeSelector,
   parseExpressions
