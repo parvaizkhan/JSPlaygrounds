@@ -8,7 +8,7 @@ This is a re-write of the JSPlaygrounds React App originally written by [Stephen
 
 ```
   npm install
-  npm start // visit localhost:8080
+  npm start // visit localhost:3000
 ```
 
 ### Contributing
