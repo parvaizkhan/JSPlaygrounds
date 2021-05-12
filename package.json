@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@babel/standalone": "^7.5.0",
-    "codemirror": "^5.48.0",
+    "codemirror": "^5.58.2",
     "esprima": "^4.0.1",
     "lodash": "^4.17.11",
     "react": "^16.8.6",
